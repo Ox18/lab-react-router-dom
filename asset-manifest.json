@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/lab-react-router-dom/static/css/main.3a88a6bd.chunk.css",
+    "main.js": "/lab-react-router-dom/static/js/main.c5e5a77c.chunk.js",
+    "main.js.map": "/lab-react-router-dom/static/js/main.c5e5a77c.chunk.js.map",
+    "runtime-main.js": "/lab-react-router-dom/static/js/runtime-main.bd9a5197.js",
+    "runtime-main.js.map": "/lab-react-router-dom/static/js/runtime-main.bd9a5197.js.map",
+    "static/js/2.abb856b3.chunk.js": "/lab-react-router-dom/static/js/2.abb856b3.chunk.js",
+    "static/js/2.abb856b3.chunk.js.map": "/lab-react-router-dom/static/js/2.abb856b3.chunk.js.map",
+    "index.html": "/lab-react-router-dom/index.html",
+    "static/css/main.3a88a6bd.chunk.css.map": "/lab-react-router-dom/static/css/main.3a88a6bd.chunk.css.map",
+    "static/js/2.abb856b3.chunk.js.LICENSE.txt": "/lab-react-router-dom/static/js/2.abb856b3.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.bd9a5197.js",
+    "static/js/2.abb856b3.chunk.js",
+    "static/css/main.3a88a6bd.chunk.css",
+    "static/js/main.c5e5a77c.chunk.js"
+  ]
+}
