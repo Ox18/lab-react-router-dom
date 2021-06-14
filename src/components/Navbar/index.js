@@ -29,29 +29,37 @@ function Index() {
               Categories
             </NavLink>
           </li>
-          <li>
-            <NavLink activeClassName="active" exact to="/login">
-              Login
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="active" exact to="/register">
-              Register
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="active" exact to="/dashboard">
-              Dashboard
-            </NavLink>
-          </li>
-          <li>
-            <NavLink activeClassName="active" exact to="/payment">
-              Payments
-            </NavLink>
-          </li>
-          <li>
-            <button onClick={auth.logout}>Logout</button>
-          </li>
+          {!auth.isLogged() && (
+            <>
+              <li>
+                <NavLink activeClassName="active" exact to="/login">
+                  Login
+                </NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="active" exact to="/register">
+                  Register
+                </NavLink>
+              </li>
+            </>
+          )}
+          {auth.isLogged() && (
+            <>
+              <li>
+                <NavLink activeClassName="active" exact to="/dashboard">
+                  Dashboard
+                </NavLink>
+              </li>
+              <li>
+                <NavLink activeClassName="active" exact to="/payment">
+                  Payments
+                </NavLink>
+              </li>
+              <li>
+                <button onClick={auth.logout}>Logout</button>
+              </li>
+            </>
+          )}
         </ul>
       </nav>
     </div>
