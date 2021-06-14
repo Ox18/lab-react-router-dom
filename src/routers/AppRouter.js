@@ -3,19 +3,18 @@ import {
   BrowserRouter as Router,
   Redirect,
   Route,
-  Switch,
-  NavLink
+  Switch
 } from "react-router-dom";
 
 import PrivateRoute from "./PrivateRoute";
 import PublicRoute from "./PublicRoute";
+import CategoriesRouter from "./CategoriesRouter";
 
 import AboutPage from "../pages/AboutPage";
 import ContactPage from "../pages/ContactPage";
 import HomePage from "../pages/HomePage";
 import NotFoundPage from "../pages/NotFoundPage";
 import ProfilePage from "../pages/ProfilePage";
-import Categories from "../pages/CategoriesPage";
 
 import LoginPage from "../pages/LoginPage";
 import PaymentPage from "../pages/PaymentPage";
@@ -50,38 +49,4 @@ export default function AppRouter() {
   );
 }
 
-function CategoriesRouter() {
-  return (
-    <div>
-      <ul>
-        <li>
-          <NavLink activeClassName="active" exact to="/categories">All</NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" exact to="/categories/terror">Terror</NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" exact to="/categories/action">Action</NavLink>
-        </li>
-        <li>
-          <NavLink activeClassName="active" exact to="/categories/anime">Anime</NavLink>
-        </li>
-      </ul>
-      <Switch>
-        <Route path="/categories" exact component={Categories} />
-        <Route path="/categories/terror" exact>
-          <h1>Category terror</h1>
-        </Route>
-        <Route path="/categories/action" exact>
-          <h1>Category action</h1>
-        </Route>
-        <Route path="/categories/anime" exact>
-          <h1>Category anime</h1>
-        </Route>
-        <Route path="*">
-          <Redirect to="/404" />
-        </Route>
-      </Switch>
-    </div>
-  );
-}
+
