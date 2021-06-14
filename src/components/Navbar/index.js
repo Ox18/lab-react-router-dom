@@ -25,7 +25,7 @@ function Index() {
           </li>
 
           <li>
-            <NavLink activeClassName="active" exact to="/categories">
+            <NavLink activeClassName="active" to="/categories">
               Categories
             </NavLink>
           </li>
