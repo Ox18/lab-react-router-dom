@@ -23,7 +23,7 @@ import RegisterPage from "../pages/RegisterPage";
 
 import NavBar from "../components/Navbar";
 
-function AppRouter() {
+export default function AppRouter() {
   return (
     <Router>
       <NavBar />
@@ -32,18 +32,39 @@ function AppRouter() {
         <Route path="/contact" exact component={ContactPage} />
         <Route path="/home" exact component={HomePage} />
         <Route path="/profile/:username" exact component={ProfilePage} />
-        <Route path="/categories" exact component={Categories} />
         <Route path="/signing">
           <Redirect to="/login" />
         </Route>
+        <Route path="/categories" component={CategoriesRouter} />
         <PublicRoute path="/login" exact component={LoginPage} />
         <PublicRoute path="/register" exact component={RegisterPage} />
         <PrivateRoute path="/dashboard" exact component={DashboardPage} />
         <PrivateRoute path="/payment" exact component={PaymentPage} />
-        <Route path="*" exact component={NotFoundPage} />
+        <Route path="/404" exact component={NotFoundPage} />
+        <Route path="*">
+          <Redirect to="/404" />
+        </Route>
       </Switch>
     </Router>
   );
 }
 
-export default AppRouter;
+function CategoriesRouter() {
+  return (
+    <Switch>
+      <Route path="/categories" exact component={Categories} />
+      <Route path="/categories/terror" exact>
+        <h1>Category terror</h1>
+      </Route>
+      <Route path="/categories/action" exact>
+        <h1>Category action</h1>
+      </Route>
+      <Route path="/categories/anime" exact>
+        <h1>Category anime</h1>
+      </Route>
+      <Route path="*">
+        <Redirect to="/404" />
+      </Route>
+    </Switch>
+  );
+}
