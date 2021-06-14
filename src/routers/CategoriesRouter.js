@@ -2,7 +2,7 @@ import { NavLink, Switch, Route, Redirect } from "react-router-dom";
 
 import Categories from "../pages/CategoriesPage";
 import PrivateRoute from "./PrivateRoute";
-
+// test
 export default function CategoriesRouter() {
   return (
     <div>
